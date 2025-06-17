@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in</title>
+</head>
+<body>
+  <h2>Sign in</h2>
+  <label for="inputA">Username:</label>
+  <input type="text" id="inputA" placeholder="Username"><br><br>
+  <label for="inputB">Password</label>
+  <input type="text" id="inputB" placeholder="Password"><br><br>
+  <button onclick="checkInputs()">Sign in</button>
+  <p id="result"></p>
+  <script>
+    function checkInputs() {
+      const a = document.getElementById("inputA").value.trim();
+      const b = document.getElementById("inputB").value.trim();
+      const expectedA = "Stjørdal";
+      const expectedB = "63°26′40″N 10°55′22″E";
+      const result = document.getElementById("result");
+      if (a === expectedA && b === expectedB) {
+        result.textContent = "✅ Correct!";
+        result.style.color = "green";
+      } 
+    }
+  </script>
+</body>
+</html>
